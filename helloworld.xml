@@ -1,10 +1,10 @@
 <context>
     <input pattern="(hi|hello|hy) *">
         <!-- Greet the user if we know his/her name -->
-        <output value="Hello $UserName!" if="full($UserName)"/>
+        <output value="Hello $req_spark_user!" if="full($req_spark_user)"/>
 
         <!-- Or activate an inner context to ask the user about his/her name -->
-        <context if="empty($UserName)" modal="true"> <!-- We use a modal context, so our bot will recognize any text as the user’s name -->
+        <context if="empty($req_spark_user)" modal="true"> <!-- We use a modal context, so our bot will recognize any text as the user’s name -->
             <output value="Hi! What is your name?"/>
 
             <input pattern="$Text">
