@@ -1,7 +1,5 @@
 <context>
     <input pattern="() *">
-       
-    
-   
+        <output value = 'Hello'/>   
     </input>
 </context>
