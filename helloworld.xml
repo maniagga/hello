@@ -1,14 +1,7 @@
 <context>
-    <input pattern="(hi|hello|hy) *">
-        <!-- Greet the user if we know his/her name -->
-        var id  = $req_spark_user;
-         <get url="https://api.ciscospark.com/v1/people/:id" var="details">
-             <header name="Authorization" value="Bearer Y2ZkZGFkN2UtMjg5Zi00OWIyLWJmYTAtOWI3ODhmNTA3ZmE3M2Q1YWM0YjctNTFl"/>
-         </get>
-        <output value='Hello'/>
+    <input pattern="() *">
        
-
-        <!-- Or activate an inner context to ask the user about his/her name -->
-        
+    
+   
     </input>
 </context>
