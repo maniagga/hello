@@ -1,7 +1,12 @@
 <context>
     <input pattern="(hi|hello|hy) *">
         <!-- Greet the user if we know his/her name -->
-        <output value="Hello $req_spark_user!" if="full($req_spark_user)"/>
+        var id  = $req_spark_user;
+         <get url="https://api.ciscospark.com/v1/people/:id" var="details">
+             <header name="Authorization" value="Bearer Y2ZkZGFkN2UtMjg5Zi00OWIyLWJmYTAtOWI3ODhmNTA3ZmE3M2Q1YWM0YjctNTFl"/>
+         </get>
+        
+        <output value='get(nickName,$details)' if="full($req_spark_user)"/>
 
         <!-- Or activate an inner context to ask the user about his/her name -->
         <context if="empty($req_spark_user)" modal="true"> <!-- We use a modal context, so our bot will recognize any text as the user’s name -->
