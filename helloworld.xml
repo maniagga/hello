@@ -6,7 +6,7 @@
              <header name="Authorization" value="Bearer Y2ZkZGFkN2UtMjg5Zi00OWIyLWJmYTAtOWI3ODhmNTA3ZmE3M2Q1YWM0YjctNTFl"/>
          </get>
         
-        <output value='Hello $req_user_firstname!'/>
+        <output value='Hello $req_user_firstname!' if="true"/>
 
         <!-- Or activate an inner context to ask the user about his/her name -->
         
