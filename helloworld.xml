@@ -5,8 +5,8 @@
          <get url="https://api.ciscospark.com/v1/people/:id" var="details">
              <header name="Authorization" value="Bearer Y2ZkZGFkN2UtMjg5Zi00OWIyLWJmYTAtOWI3ODhmNTA3ZmE3M2Q1YWM0YjctNTFl"/>
          </get>
-        
-        <output value='Hello $req_user_firstname!' if="full($req_user_firstname)"/>
+        <output value='Hello'/>
+       
 
         <!-- Or activate an inner context to ask the user about his/her name -->
         
